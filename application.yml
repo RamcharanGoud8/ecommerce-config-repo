@@ -1,0 +1,19 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://service-registry:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+jwt:
+  secret: your-super-secret-key-that-is-at-least-256-bits-long-for-hs256
+  expiration: 86400000
